@@ -1,3 +1,15 @@
+# Manim media files
+
+media/
+
+# Mac os x stuff
+
+.DS_Store
+
+# venv bin 
+
+bin/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
