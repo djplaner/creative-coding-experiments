@@ -1,7 +1,8 @@
 # About
 
-Explorations into [creative coding] using the Python [Manim (community) library](https://www.manim.community/).
+Explorations into [creative coding] using the Python. Originally the plan was just using [Manim (community) library](https://www.manim.community/), but subsequent work has expanded to simple console work and explorations of Processing.
 
+See the projects [development log for more](https://djplaner.github.io/memex/sense/Python/creative-coding-with-python/)
 
 
 ## Use
