@@ -13,7 +13,7 @@ screenHeight = 800
 triangleWidth = screenWidth - 50
 triangleHeight = screenHeight - 50
 
-circleSize = 5
+circleSize = 25
 
 def setup():
     size(screenWidth, screenHeight) 
@@ -27,22 +27,18 @@ def draw():
     fill(123, 15)
 
     # define coords of three verticies of triangle
-    width = triangleWidth
-    height = triangleHeight
-    vertices = [(width/2, 10), (width, 10+height), (70, 10+height)]
+    vertices = [(triangleWidth/2, circleSize+5), (triangleWidth, 10+triangleHeight), (70, 10+triangleHeight)]
 
     # display a circle at each vertex
     for vertex in vertices:
         circle(vertex, circleSize)
 
-    # randomly choose x between 70 and width
-    # randomly choose y between 10 and height
-    currentPoint = ( random_uniform(70, width), random_uniform(10, height) )
-    #circle(currentPoint, circleSize*10)
+    #-- get a starting point along the base line of the triangle
+    # - making certain it's in the triangle
+    currentPoint = ( random_uniform(70, triangleWidth), random_uniform(triangleHeight, 10+triangleHeight) )
+    #circle(currentPoint, circleSize*100)
+    stroke(0)
 
-    #print(currentPoint)
-
-    # 2000 times
     for i in range(2000):
         # pick a random vertex
         v = random_choice(vertices)
@@ -54,7 +50,6 @@ def draw():
         currentPoint = (x, y)
         circle(currentPoint,circleSize)
 
-    #input("checking")
 
-    
-run(renderer="vispy")
+if __name__ == "__main__": 
+    run(renderer="vispy")
